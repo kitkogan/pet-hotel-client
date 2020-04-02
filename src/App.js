@@ -1,7 +1,11 @@
 import React, {useEffect} from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+//using react hook to make API call to Flask server
+//using react hooks to make the call with useEffect
+//empty array at the end is like a 'component did mount', so whatever data at the 
+//end of the path will render on page load but can be changed if needed.
+//added proxy to package.json to help with the server request
 function App() {
   useEffect(() => {
     fetch('/urlpathtoroute')
@@ -14,20 +18,9 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>PET HOTEL</h2>
+       
+  
     </div>
   );
 }
